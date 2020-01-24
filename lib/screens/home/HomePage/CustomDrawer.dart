@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hogwarts/models/user.dart';
 import 'package:hogwarts/screens/home/Dashboard/DashboardHome.dart';
+import 'package:hogwarts/screens/home/HomePage/ChartHome.dart';
 import 'package:hogwarts/services/auth.dart';
 import 'package:hogwarts/services/database.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +44,7 @@ class CustomDrawer extends StatelessWidget {
                   child: Container(
                       width: double.infinity,
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(Icons.dashboard),
                             Text(
@@ -62,7 +63,26 @@ class CustomDrawer extends StatelessWidget {
                   child: Container(
                       width: double.infinity,
                       child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Icon(Icons.videogame_asset),
+                            Text(
+                              "House Points",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ])),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                            builder: (context) => Chart()));
+                  },
+                ),
+                FlatButton(
+                  child: Container(
+                      width: double.infinity,
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Icon(Icons.chevron_left),
                             Text(
