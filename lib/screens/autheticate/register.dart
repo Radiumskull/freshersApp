@@ -22,14 +22,17 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return loading
         ? ColorLoader(colors: [
-            Colors.amber[100],
-            Colors.amber[200],
-            Colors.amber[300],
-            Colors.amber[400],
-            Colors.amber[500]
+            Colors.amber,
+            Colors.red,
+            Colors.blue,
+            Colors.green,
           ], duration: Duration(seconds: 2))
         : Scaffold(
-            resizeToAvoidBottomInset: false,
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
             backgroundColor: Colors.amber[50],
             appBar: AppBar(
               elevation: 0.0,
