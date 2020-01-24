@@ -14,12 +14,15 @@ class _StudentListState extends State<StudentList> {
   Widget build(BuildContext context) {
     final students = Provider.of<List<Student>>(context);
     return students == null
-        ? Container()
+        ? Container(
+            child: Text("Waiting"),
+          )
         : Column(
             children: <Widget>[
               StudentDash(studentLength: students.length),
               Expanded(
                 child: ListView.builder(
+                  shrinkWrap: true,
                   itemCount: students.length,
                   itemBuilder: (context, index) {
                     return StudentTile(index: index, student: students[index]);

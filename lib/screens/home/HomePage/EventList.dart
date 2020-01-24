@@ -15,6 +15,7 @@ class _EventListState extends State<EventList> {
     return events == null
         ? Container()
         : ListView.builder(
+            shrinkWrap: true,
             itemCount: events.length,
             itemBuilder: (context, index) {
               return EventTile(index: index, event: events[index]);

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:hogwarts/screens/autheticate/register.dart';
 import 'package:hogwarts/services/auth.dart';
 import 'package:hogwarts/shared/color_loader.dart';
 
@@ -23,29 +21,22 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return loading
         ? ColorLoader(colors: [
-            Colors.amber[100],
-            Colors.amber[200],
-            Colors.amber[300],
-            Colors.amber[400],
-            Colors.amber[500]
+            Colors.amber,
+            Colors.red,
+            Colors.blue,
+            Colors.green,
           ], duration: Duration(seconds: 2))
         : Scaffold(
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
             backgroundColor: Colors.amber[50],
             appBar: AppBar(
               elevation: 0.0,
               backgroundColor: Colors.amber,
               title: Text("Sign In"),
-              actions: <Widget>[
-                FlatButton(
-                  child: Text("Register"),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => Register()));
-                  },
-                )
-              ],
             ),
             body: Container(
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
@@ -93,8 +84,7 @@ class _SignInState extends State<SignIn> {
                           setState(() => loading = true);
                           result = await _auth.signInWithEmailAndPassword(
                               userName, password);
-
-                          if (error != null && result == null) {
+                          if (result == null) {
                             setState(() {
                               loading = false;
                               error = "Username or Password is Incorrect";

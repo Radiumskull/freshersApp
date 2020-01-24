@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StudentDash extends StatelessWidget {
-  int studentLength;
+  final int studentLength;
   StudentDash({this.studentLength});
+
   @override
   Widget build(BuildContext context) {
     return Card(
