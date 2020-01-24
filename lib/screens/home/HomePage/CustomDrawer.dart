@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogwarts/models/Event.dart';
 import 'package:hogwarts/models/user.dart';
 import 'package:hogwarts/screens/home/Dashboard/DashboardHome.dart';
 import 'package:hogwarts/screens/home/HomePage/ChartHome.dart';
@@ -72,10 +73,8 @@ class CustomDrawer extends StatelessWidget {
                             ),
                           ])),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) => Chart()));
+                    Navigator.push(context,
+                        new MaterialPageRoute(builder: (context) => Chart()));
                   },
                 ),
                 FlatButton(

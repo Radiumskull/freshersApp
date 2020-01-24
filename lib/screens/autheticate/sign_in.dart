@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hogwarts/screens/autheticate/register.dart';
 import 'package:hogwarts/services/auth.dart';
 import 'package:hogwarts/shared/color_loader.dart';

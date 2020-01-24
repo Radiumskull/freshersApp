@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hogwarts/screens/autheticate/register.dart';
 import 'package:hogwarts/services/auth.dart';
-import 'package:hogwarts/services/events.dart';
 
 class LoginDrawer extends StatelessWidget {
   @override

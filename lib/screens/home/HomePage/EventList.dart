@@ -15,9 +15,13 @@ class _EventListState extends State<EventList> {
     return events == null
         ? Container()
         : ListView.builder(
-            itemCount: events.length,
+            itemCount: events.length - 1,
             itemBuilder: (context, index) {
-              return EventTile(index: index, event: events[index]);
+              if (events[index].headline != null) {
+                return EventTile(index: index, event: events[index]);
+              } else {
+                return null;
+              }
             },
           );
   }
