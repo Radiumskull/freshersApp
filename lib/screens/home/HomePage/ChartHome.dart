@@ -119,7 +119,7 @@ class _ChartState extends State<Chart> {
                                     decoration: new BoxDecoration(
                                       image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/images/raven.png'),
+                                              'assets/images/ravenclaw.png'),
                                           fit: BoxFit.fill),
                                     ),
                                   ),
@@ -150,7 +150,7 @@ class _ChartState extends State<Chart> {
                                     decoration: new BoxDecoration(
                                       image: DecorationImage(
                                           image: AssetImage(
-                                              'assets/images/gryffindor.png'),
+                                              'assets/images/griffindor.png'),
                                           fit: BoxFit.fill),
                                     ),
                                   ),
