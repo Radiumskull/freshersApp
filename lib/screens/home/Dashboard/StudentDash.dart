@@ -21,7 +21,7 @@ class StudentDash extends StatelessWidget {
                 ),
                 Text(
                   "Enrolled",
-                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -37,7 +37,7 @@ class StudentDash extends StatelessWidget {
                 ),
                 Text(
                   "Total",
-                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
               ],
             ),

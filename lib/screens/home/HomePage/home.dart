@@ -17,11 +17,13 @@ class Home extends StatelessWidget {
         drawer: CustomDrawer(),
         body: Column(
           children: <Widget>[
-            Card(
-              child: Container(
-                color: Colors.yellowAccent,
-                height: 200,
-                width: double.infinity,
+            Container(
+              margin: EdgeInsets.only(top: 30, bottom: 30),
+              child: Center(
+                child: Text(
+                  "Events",
+                  style: TextStyle(fontSize: 48, fontWeight: FontWeight.w500),
+                ),
               ),
             ),
             Expanded(child: EventList()),
