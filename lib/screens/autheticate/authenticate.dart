@@ -6,6 +6,7 @@ class Authenticate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       color: Colors.amber[100],
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

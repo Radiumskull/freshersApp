@@ -28,11 +28,6 @@ class _RegisterState extends State<Register> {
             Colors.green,
           ], duration: Duration(seconds: 2))
         : Scaffold(
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
             backgroundColor: Colors.amber[50],
             appBar: AppBar(
               elevation: 0.0,
@@ -105,7 +100,6 @@ class _RegisterState extends State<Register> {
                       onPressed: () async {
                         if (_formKey.currentState.validate()) {
                           setState(() => loading = true);
-
                           dynamic result =
                               await _auth.registerwithEmailandPassword(
                                   name, email, password, interests);

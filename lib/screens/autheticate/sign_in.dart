@@ -27,11 +27,6 @@ class _SignInState extends State<SignIn> {
             Colors.green,
           ], duration: Duration(seconds: 2))
         : Scaffold(
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
             backgroundColor: Colors.amber[50],
             appBar: AppBar(
               elevation: 0.0,
