@@ -29,8 +29,6 @@ class _SplaState extends State<Spla> {
 class AfterSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: Wrapper(),
-    );
+    return Wrapper();
   }
 }

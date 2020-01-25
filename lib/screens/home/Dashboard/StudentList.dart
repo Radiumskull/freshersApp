@@ -19,6 +19,9 @@ class _StudentListState extends State<StudentList> {
           )
         : Column(
             children: <Widget>[
+              SizedBox(
+                height: 50,
+              ),
               StudentDash(studentLength: students.length),
               Expanded(
                 child: ListView.builder(

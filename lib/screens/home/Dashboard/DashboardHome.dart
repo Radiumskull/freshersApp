@@ -10,8 +10,11 @@ class DashboardHome extends StatelessWidget {
     return StreamProvider<List<Student>>.value(
       value: DatabaseService().students,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("Hogwarts"),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         body: StudentList(),
       ),

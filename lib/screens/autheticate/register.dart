@@ -21,18 +21,14 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return loading
-        ? ColorLoader(colors: [
-            Colors.amber,
-            Colors.red,
-            Colors.blue,
-            Colors.green,
-          ], duration: Duration(seconds: 2))
+        ? Loading()
         : Scaffold(
             backgroundColor: Colors.amber[50],
-            appBar: AppBar(
-              elevation: 0.0,
-              backgroundColor: Colors.amber,
-              title: Text("Register"),
+            floatingActionButton: FloatingActionButton(
+              child: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
             ),
             body: Container(
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
